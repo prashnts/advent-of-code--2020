@@ -20,13 +20,13 @@ mem[26] = 1\
 '''
 
 def bit_string(number):
-    '''Return a padded 32bit representation of number'''
+    '''Return a padded 36bit representation of number'''
     return bin(number)[2:].zfill(36)
 
 
 def calculate_1(data):
     mem = defaultdict(int)
-    mask = 'X' * 32
+    mask = 'X' * 36
 
     def apply_bitmask(mask, number):
         bits = bit_string(number)
@@ -49,7 +49,7 @@ def calculate_1(data):
 
 def calculate_2(data):
     mem = defaultdict(int)
-    mask = 'X' * 32
+    mask = 'X' * 36
 
     def apply_bitmask(mask, number):
         bits = bit_string(number)
